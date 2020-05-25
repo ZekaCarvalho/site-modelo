@@ -1,0 +1,220 @@
+/* reset do CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import das fontes*/
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  background-color: #1E2933;
+  background-size: auto 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+}
+
+header {
+  height: 100vh;
+  background-image: url('../img/background2.jpg');
+  background-size: auto 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #24323f;
+  display: flex;
+  /* Centraliza no eixo x (horizontalmente) */
+  justify-content: center;
+  /* Centraliza no eixo y (verticalmente) */
+  align-items: center;
+}
+
+a {
+  color: #24323f;
+  text-decoration: none;
+}
+
+h2 {
+  color: whitesmoke;
+}
+
+.menu {
+  background-color: white;
+  /* Deixa o menu fixo no eixo z */
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  /* Só funciona com um position. Define a margem superior no eixo z*/
+  top: 0;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  display: block;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+.menu a:hover {
+  background-color: #1E2933;
+  color: whitesmoke;
+}
+
+.site-subtitle, .site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 3em;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 400;
+}
+
+.site-subtitle {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.sobre,
+.contato, 
+.portifolio {
+  padding: 2em;
+  min-height: 100vh;
+  margin-bottom: 10vw;
+}
+
+@media (min-width:1200px){
+  .conteudo-central {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+
+.sobre h2,
+.contato h2, 
+.portifolio h2 {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sobre p{
+  color:whitesmoke;
+  margin-bottom: 1.4em;
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.sobre .avatar{
+  float:right;
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+.sobre .avatar img {
+  width: 400px;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.portifolio .grid {
+  margin-top: 10vw;
+  display: grid;
+  gap: 2em;
+  justify-content: center;
+}
+
+@media (min-width: 560px) {
+  .portifolio .grid {
+    grid-template-columns: repeat(2, 240px);
+  }
+}
+
+@media (min-width: 880px) {
+  .portifolio .grid {
+    grid-template-columns: repeat(3, 240px);
+  }
+  .sobre h2, 
+  .contato h2, 
+  .portifolio h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portifolio .grid {
+    grid-template-columns: repeat(4, 240px);
+    align-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portifolio figure {
+  text-align: center;
+}
+
+.portifolio figcaption {
+  color: #A05A32;
+  font-family: 'Roboto', sans-serif;
+}
+
+.portifolio .img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left bottom;
+  border-radius: 10px;
+}
+
+.portifolio figure{
+  transition: 0.3s;
+}
+
+.portifolio figure:hover {
+  transform: scale(1.1);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 6vw;
+  transition: 0.3s;
+}
+
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px #A05A32;
+}
+
+/* Se a tela tiver pelo menos 400px vai carregar esse estilos */
+
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  .site-title {
+    font-size: 5vw;
+  }
+  .site-subtitle {
+    font-size: 2vw;
+  }
+}
